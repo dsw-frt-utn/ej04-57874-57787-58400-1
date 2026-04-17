@@ -35,8 +35,12 @@ public abstract class Vehiculo {
         return anio;
     }
 
-    public Marca getMarca() {
-        return marca;
+    public String getMarcaNombre() {
+        return marca.getNombre();
+    }
+
+    public String getMarcaPais() {
+        return marca.getPais();
     }
     
     public String getCodigoSucursal(){

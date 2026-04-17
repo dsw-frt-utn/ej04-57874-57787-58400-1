@@ -35,7 +35,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jScrollPane1" pref="632" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="calcularConsumos" min="-2" pref="165" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="calcularConsumos" pref="165" max="32767" attributes="0"/>
+                          <Component id="mostrarVehiculo" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="panel" min="-2" pref="440" max="-2" attributes="0"/>
                   </Group>
@@ -51,7 +54,11 @@
               <Component id="jScrollPane1" min="-2" pref="181" max="-2" attributes="0"/>
               <EmptySpace pref="16" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="calcularConsumos" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="calcularConsumos" min="-2" pref="37" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="mostrarVehiculo" min="-2" pref="38" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="panel" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -174,5 +181,13 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="mostrarVehiculo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mostrar Vehiculos"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mostrarVehiculoActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

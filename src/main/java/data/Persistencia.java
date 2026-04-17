@@ -58,10 +58,22 @@ public class Persistencia {
                 .findFirst();
     }
     
+    public static ArrayList<Sucursal> getSucursales(){
+        return sucursales;
+    }
+            
+    public static ArrayList<Marca> getMarcas(){
+        return marcas;
+    }
+    
+    public static void agregarVehiculo(Vehiculo v){
+        vehiculos.add(v);
+    }
+    
     public static void inicializar(){
         inicializarMarcas();
         inicializarResponsables();
         inicializarSucursales();
-        inicializarVehiculos();
+        //inicializarVehiculos();
     }
 }
