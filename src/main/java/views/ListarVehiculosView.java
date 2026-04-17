@@ -17,24 +17,24 @@ public class ListarVehiculosView extends javax.swing.JFrame {
         listarVehiculos();
     }
     private void listarVehiculos(){
-        ArrayList<VehiculoViewModel> vehiculos = Controlador.getVehiculos();
-        vehiculosGrid.setModel(new DefaultTableModel(new Object[][] {}, 
-            new String[] { "Patente","Vehículo", "Tipo", "Sucursal", "Cap.Carga", "Km/litro", "Año", "Litros extra", "Km a recorrer" }));
-        
-        for(VehiculoViewModel vehiculo : vehiculos){
-            ((DefaultTableModel)vehiculosGrid.getModel()).addRow(new Object[] {
-                vehiculo.getPatente(),
-                vehiculo.getNombre(),
-                vehiculo.getPais(),
-                vehiculo.getTipo(),
-                vehiculo.getSucursal(),
-                vehiculo.getCapacidadCarga(),
-                vehiculo.getKmPorLitro(),
-                vehiculo.getAnio(),
-                vehiculo.getLitrosExtra(),
-                vehiculo.getKmARecorrer()
-            });
-        }
+       ArrayList<VehiculoViewModel> vehiculos = Controlador.getVehiculos();
+    vehiculosGrid.setModel(new DefaultTableModel(new Object[][] {}, 
+        new String[] { "Patente","Vehículo marca", "País", "Tipo", "Sucursal", "Cap.Carga", "Km/litro", "Año", "Litros extra", "Km a recorrer" }));
+    
+    for(VehiculoViewModel vehiculo : vehiculos){
+        ((DefaultTableModel)vehiculosGrid.getModel()).addRow(new Object[] {
+            vehiculo.getPatente(),
+            vehiculo.getNombre(),
+            vehiculo.getPais(),
+            vehiculo.getTipo(),
+            vehiculo.getSucursal(),
+            vehiculo.getCapacidadCarga(),
+            vehiculo.getKmPorLitro(),
+            vehiculo.getAnio(),
+            vehiculo.getLitrosExtra(),
+            vehiculo.getKmARecorrer()
+        });
+    }
     }
 
     /**
@@ -180,24 +180,7 @@ public class ListarVehiculosView extends javax.swing.JFrame {
     }//GEN-LAST:event_calcularConsumosActionPerformed
 
     private void mostrarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarVehiculoActionPerformed
-        ArrayList<VehiculoViewModel> vehiculos = Controlador.getVehiculos();
-        vehiculosGrid.setModel(new DefaultTableModel(new Object[][] {},
-            new String[] { "Patente","Vehículo marca","pais", "Tipo", "Sucursal", "Cap.Carga", "Km/litro", "Año", "Litros extra", "Km a recorrer" }));
-
-    for(VehiculoViewModel vehiculo : vehiculos){
-        ((DefaultTableModel)vehiculosGrid.getModel()).addRow(new Object[] {
-            vehiculo.getPatente(),
-            vehiculo.getNombre(),
-            vehiculo.getPais(),
-            vehiculo.getTipo(),
-            vehiculo.getSucursal(),
-            vehiculo.getCapacidadCarga(),
-            vehiculo.getKmPorLitro(),
-            vehiculo.getAnio(),
-            vehiculo.getLitrosExtra(),
-            vehiculo.getKmARecorrer()
-        });
-        }
+       listarVehiculos();
     }//GEN-LAST:event_mostrarVehiculoActionPerformed
 
     /**
